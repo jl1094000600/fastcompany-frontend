@@ -19,7 +19,7 @@ export function SandpackPreview() {
 
   const sandpackFiles = useMemo(() => {
     const result: Record<string, string> = {};
-    for (const path of readyFiles) {
+    for (const path of Array.from(readyFiles)) {
       if (allFiles[path] !== undefined) {
         const key = path.startsWith("/") ? path : `/${path}`;
         result[key] = allFiles[path];

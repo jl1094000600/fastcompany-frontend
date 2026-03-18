@@ -19,7 +19,7 @@ interface UsageData {
   total_prompt_tokens: number;
   total_completion_tokens: number;
   total_tokens: number;
-  total_requests: number;
+  total_requests?: number;
 }
 
 export function TokenUsageDashboard() {
